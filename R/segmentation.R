@@ -545,7 +545,7 @@ runCaSpERWithoutLOH  <- function(object, project) {
         seg <- object@segments
         amp[[i]] <- extractEvents(segments = seg, cytoband = object@cytoband, type = "amp")
         del[[i]] <- extractEvents(segments =  seg, cytoband = object@cytoband, type = "del")
-
+        segments[[i]] <-seg
     }
 
     save(segments, file=paste0(project, "_segments.rda"))
